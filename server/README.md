@@ -2,18 +2,18 @@
 
 TypeScript API using Express 5, Prisma ORM 7, and PostgreSQL.
 
-This package is part of the repository's `apps/*` npm workspace. Install dependencies from the
-repository root.
+This package is part of the repository's npm workspace. Install dependencies from the repository
+root.
 
 ## Local development
 
 ```sh
-cd ../..
+cd ..
 npm install
-cp apps/server/.env.example apps/server/.env
-docker compose --file apps/server/compose.yaml up -d
-npm --workspace=apps/server run db:migrate
-npm run dev
+cp server/.env.example server/.env
+docker compose --file server/compose.yaml up -d
+npm run db:migrate --workspace server
+npm run dev:server
 ```
 
 The server listens on port `3000` by default. PostgreSQL is exposed only on localhost port `5433`.

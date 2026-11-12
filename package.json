@@ -3,11 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "workspaces": [
-    "apps/*"
+    "mobile",
+    "server"
   ],
   "scripts": {
-    "dev": "npm --workspace=apps/server run dev",
-    "build": "npm --workspace=apps/server run build",
-    "start": "npm --workspace=apps/server start"
+    "dev": "npm run dev:server",
+    "dev:mobile": "npm run start --workspace mobile",
+    "dev:server": "npm run dev --workspace server",
+    "android": "npm run android --workspace mobile",
+    "ios": "npm run ios --workspace mobile",
+    "web": "npm run web --workspace mobile",
+    "build": "npm run build:server",
+    "build:mobile": "npm run export --workspace mobile",
+    "build:server": "npm run build --workspace server",
+    "start": "npm run start:server",
+    "start:server": "npm run start --workspace server",
+    "typecheck": "npm run typecheck --workspaces"
   }
 }

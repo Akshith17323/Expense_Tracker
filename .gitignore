@@ -6,11 +6,17 @@ dist/
 *.log
 .DS_Store
 
+# Expo local state and generated native projects
+.expo/
+mobile/android/
+mobile/ios/
+
 # Generated Prisma Client
-apps/server/src/generated/
+server/src/generated/
 
 # Local PostgreSQL data, if a bind mount is used later
-apps/server/postgres-data/
+server/postgres-data/
 
 # npm workspaces use the lockfile at the repository root
-apps/*/package-lock.json
+mobile/package-lock.json
+server/package-lock.json
