@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+
+# Generated Prisma Client
+apps/server/src/generated/
+
+# Local PostgreSQL data, if a bind mount is used later
+apps/server/postgres-data/
+
+# npm workspaces use the lockfile at the repository root
+apps/*/package-lock.json

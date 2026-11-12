@@ -1,0 +1,13 @@
+{
+  "name": "expense-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm --workspace=apps/server run dev",
+    "build": "npm --workspace=apps/server run build",
+    "start": "npm --workspace=apps/server start"
+  }
+}
